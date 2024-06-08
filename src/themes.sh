@@ -54,7 +54,7 @@ case $SELECTED_THEME in
 *)
   # Default to night theme
   declare -A THEME=(
-    ["background"]="#1e1e2e"
+    ["background"]="black"
     ["foreground"]="#cdd6f4"
     ["black"]="#414868"
     ["blue"]="#7aa2f7"
