@@ -28,7 +28,7 @@ fi
 
 # playerctl
 if command -v playerctl >/dev/null; then
-  PLAYER_STATUS=$(playerctl -a metadata --format "{{stats}};{{mpris:length}};{{position}};{{title}}" | grep -m1 "Playing")
+  PLAYER_STATUS=$(playerctl -a metadata --format "{{status}};{{mpris:length}};{{position}};{{title}}" | grep -m1 "Playing")
   STATUS="playing"
 
   # There is no playing media, check for paused media
@@ -83,9 +83,9 @@ else
 fi
 if [ -n "$TITLE" ]; then
   if [ "$STATUS" = "playing" ]; then
-    PLAY_STATE="░ $OUTPUT"
+    PLAY_STATE="░  $OUTPUT"
   else
-    PLAY_STATE="░ 󰏤$OUTPUT"
+    PLAY_STATE="░ 󰏤 $OUTPUT"
   fi
   OUTPUT="$PLAY_STATE $TITLE"
 
