@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SELECTED_THEME="storm"
+SELECTED_THEME="$(tmux show-option -gv @tokyo-night-tmux_theme)"
 
 case $SELECTED_THEME in
 "storm")
@@ -54,8 +54,8 @@ case $SELECTED_THEME in
 *)
   # Default to night theme
   declare -A THEME=(
-    ["background"]="#1A1B26"
-    ["foreground"]="#a9b1d6"
+    ["background"]="#1e1e2e"
+    ["foreground"]="#cdd6f4"
     ["black"]="#414868"
     ["blue"]="#7aa2f7"
     ["cyan"]="#7dcfff"
